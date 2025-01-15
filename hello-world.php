@@ -3,6 +3,14 @@
   $msg_count       = 7;
   $true_bool       = true;
   $false_bool      = false;
+  $fruit_list      = [
+    'Banana',    // index: 0
+    'Apple',     // index: 1
+    'Orange',    // index: 2
+    'Mango',     // index: 3
+    'Grapes',    // index: 4
+    'Pineapple'  // index: 5
+  ];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,8 +22,9 @@
 </head>
 <body>
   <h1><?php echo $welcome_message; ?></h1>
-  <p><?php  echo $msg_count ?></p>
-  <p>Boolean true prints: <?php  echo $true_bool ?></p>
-  <p>Boolean false prints: <?php  echo $false_bool ?></p>
+  <p><?php  echo $msg_count; ?></p>
+  <p>Boolean true prints: <?php  echo $true_bool; ?></p>
+  <p>Boolean false prints: <?php  echo $false_bool; ?></p>
+  <p><?php echo $fruit_list[ 3 ]; ?></p>
 </body>
 </html>
