@@ -11,6 +11,11 @@
     'Grapes',    // index: 4
     'Pineapple'  // index: 5
   ];
+  $student = [
+    'name'    => 'John Smith',
+    'age'     => 21,
+    'program' => 'Computer Science'
+  ];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,5 +31,6 @@
   <p>Boolean true prints: <?php  echo $true_bool; ?></p>
   <p>Boolean false prints: <?php  echo $false_bool; ?></p>
   <p><?php echo $fruit_list[ 3 ]; ?></p>
+  <p>Student's name is: <?php echo $student[ 'name' ]; ?></p>
 </body>
 </html>
