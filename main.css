@@ -1,0 +1,38 @@
+@import url( 'https://fonts.googleapis.com/css?family=Anton:400|Roboto:400,700' );
+
+html, body {
+  height : 100%;
+}
+
+body {
+  font-family         : 'Roboto', sans-serif;
+  background-color    : #FFFFFF;
+  color               : #CF5C36;
+  margin              : 0px;
+  background-image    : url( 'polka-dots.png' );
+  background-size     : 411px 200;
+  background-position : right top;
+  background-repeat   : repeat-y;
+}
+
+h1 {
+  font-family : 'Anton', serif;
+  padding     : 10px 20px 12px 20px;
+  margin      : 0px;
+  color       : #111344;
+}
+
+h2 {
+  font-weight    : 700;
+  font-size      : 1em;
+  text-transform : uppercase;
+  letter-spacing : 0.1em;
+  padding        : 20px;
+  margin         : 0px;
+}
+
+p {
+  padding   : 6px 20px 6px 20px;
+  margin    : 0px;
+  font-size : 1.5rem;
+}
