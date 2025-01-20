@@ -9,7 +9,7 @@ $offers = [
 <html>
   <head>
     <title>Multidimensional Arrays</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/dw3/main.css">
   </head>
   <body>
     <h1>The Candy Store</h1>
