@@ -14,7 +14,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>The Candy Store</title>
+    <title>The Bakery</title>
     <link rel="stylesheet" href="/dw3/main.css">
   </head>
   <body>
