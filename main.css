@@ -36,3 +36,25 @@ p {
   margin    : 0px;
   font-size : 1.5rem;
 }
+
+table {
+  background-color: #FFFFFF;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid #C0C0C0;
+  border-spacing: 0px;
+}
+  
+th {
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 0.75em;
+  letter-spacing: 0.2em;
+  padding: 5px 10px;
+  background-color: #E6E6E6;
+  color: #111344;
+}
+  
+td {
+  padding: 5px 10px;
+}
