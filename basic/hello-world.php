@@ -23,7 +23,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="/dw3/main.css" />
 </head>
 <body>
   <h1><?php echo $welcome_message; ?></h1>
