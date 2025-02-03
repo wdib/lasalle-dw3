@@ -21,32 +21,28 @@
     return ( $price * $quantity ) * ( $tax / 100 );
   }
 ?>
-<!DOCTYPE html>
-<html> 
-  <head>
-    <title>Lab 7</title>
-    <link rel="stylesheet" href="/dw3/main.css">
-  </head>
-  <body>
-    <h1>The Candy Store</h1>
-    <h2>Stock Control</h2>
-    <table>
-      <tr>
-        <th>Product</th>
-        <th>Stock</th>
-        <th>Re-order</th>
-        <th>Total value</th>
-        <th>Tax due</th>
-      </tr>
-      <?php foreach ( $candy as $product_name => $data ) { ?>
-        <tr>
-          <td><?=  $product_name    ?></td>
-          <td><?=  $data[ 'stock' ] ?></td>
-          <td><?=  get_reorder_message( $data[ 'stock' ] ) ?></td>
-          <td>$<?= get_total_value( $data[ 'price' ], $data[ 'stock' ] )   ?></td>
-          <td>$<?= get_tax_due( $data[ 'price' ], $data[ 'stock' ], $tax ) ?></td>
-       </tr>
-      <?php } ?>
-    </table>
-  </body>
+
+<?php include 'includes/header.php' ?>
+
+<h1>The Candy Store</h1>
+<h2>Stock Control</h2>
+<table>
+  <tr>
+    <th>Product</th>
+    <th>Stock</th>
+    <th>Re-order</th>
+    <th>Total value</th>
+    <th>Tax due</th>
+  </tr>
+  <?php foreach ( $candy as $product_name => $data ) { ?>
+    <tr>
+      <td><?=  $product_name    ?></td>
+      <td><?=  $data[ 'stock' ] ?></td>
+      <td><?=  get_reorder_message( $data[ 'stock' ] ) ?></td>
+      <td>$<?= get_total_value( $data[ 'price' ], $data[ 'stock' ] )   ?></td>
+      <td>$<?= get_tax_due( $data[ 'price' ], $data[ 'stock' ], $tax ) ?></td>
+    </tr>
+  <?php } ?>
+</table>
+</body>
 </html>
