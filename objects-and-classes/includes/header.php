@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>The Candy Store</title>
-    <link rel="stylesheet" href="/dw3/main.css">
+    <title>The Bank</title>
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <h1>The Candy Store</h1>
-    <nav>
-      <a href="index.php">Home</a> | 
-      <a href="candy.php">Candy</a> | 
-      <a href="about.php">About</a> | 
-      <a href="contact.php">Contact</a>
-    </nav>
+    <h1>The Bank</h1>

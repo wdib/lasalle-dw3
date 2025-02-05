@@ -21,5 +21,3 @@
 
 <p>Email: <?= $customer->email ?></p>
 <p>Balance: $<?= $account->balance ?></p>
-
-<?php include 'includes/footer.php'; ?>

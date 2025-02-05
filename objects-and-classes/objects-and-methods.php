@@ -22,5 +22,3 @@
 <?php include 'includes/header.php'; ?>
 
 <p>$<?= $account->deposit( 50.00 ) ?></p>
-
-<?php include 'includes/footer.php'; ?>
