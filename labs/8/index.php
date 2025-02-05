@@ -1,8 +1,8 @@
 <?php
   class Book {
-    public $title;
-    public $author;
-    public $yearPublished;
+    public string $title;
+    public string $author;
+    public int    $yearPublished;
 
     public function setTitle( $title ) {
       $this->title = $title;
