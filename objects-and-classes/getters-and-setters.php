@@ -31,11 +31,11 @@
     }
   }
 
-  $account = new Account( 20148896, 'Savings', 80.00 );
+  $account = new Account( 3147134138, 'Savings', 180.00 );
 ?>
 
 <?php include 'includes/header.php'; ?>
 
 <h2><?= $account->type ?> Account</h2>
 <p>Previous balance: $<?= $account->getBalance() ?></p>
-<p>New balance: $<?= $account->deposit( 35.00 ) ?></p>
+<p>New balance: $<?= $account->deposit( 350.00 ) ?></p>
