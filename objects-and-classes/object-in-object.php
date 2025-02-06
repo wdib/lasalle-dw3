@@ -16,17 +16,17 @@
       $this->balance = $balance;
     }
 
-    public function deposit ( float $amount ): float {
+    public function deposit( float $amount ): float {
       $this->balance += $amount;
       return $this->balance;
     }
 
-    public function withdraw ( float $amount ): float {
+    public function withdraw( float $amount ): float {
       $this->balance -= $amount;
       return $this->balance;
     }
 
-    public function getBalance (): float {
+    public function getBalance(): float {
       return $this->balance;
     }
   }
@@ -41,14 +41,14 @@
     }
   }
 
-
-  $numbers = new AccountNumber( 12345678, 987654321 );
-
-  $account = new Account( $numbers, 'Savings', 10.00 );
+  $accountNumbers = new AccountNumber( 23467289, 1398470710 );
+  $account        = new Account( $accountNumbers, 'Savings', 180.00 );
 ?>
 
 <?php include 'includes/header.php'; ?>
 
 <h2><?= $account->type ?> Account</h2>
-Account <?= $account->number->accountNumber ?><br>
-Routing <?= $account->number->routingNumber ?><br>
+<p>Account number: <?= $account->number->accountNumber; ?></p>
+<p>Routing number: <?= $account->number->routingNumber; ?></p>
+<p>Previous balance: $<?= $account->getBalance() ?></p>
+<p>New balance: $<?= $account->deposit( 350.00 ) ?></p>
