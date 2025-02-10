@@ -80,3 +80,7 @@ p {
 .important {
   color : #ffffff;
 }
+
+td.overdrawn {
+  color : #fca905;
+}
