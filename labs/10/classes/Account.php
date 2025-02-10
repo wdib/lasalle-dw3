@@ -1,8 +1,8 @@
 <?php
   class Account {
-    public    int    $number;
-    public    string $type;
-    protected float  $balance;
+    public int    $number;
+    public string $type;
+    public float  $balance;
 
     public function __construct (
       int    $number,
