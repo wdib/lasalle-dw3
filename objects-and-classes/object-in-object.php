@@ -32,12 +32,20 @@
   }
 
   class AccountNumber {
-    public int $accountNumber;
-    public int $routingNumber;
+    protected int $accountNumber;
+    protected int $routingNumber;
 
     public function __construct ( int $accountNumber, int $routingNumber ) {
       $this->accountNumber = $accountNumber;
       $this->routingNumber = $routingNumber;
+    }
+
+    public function getAccountNumber () {
+      return $this->accountNumber;
+    }
+
+    public function getRoutingNumber () {
+      return $this->routingNumber;
     }
   }
 
@@ -48,7 +56,7 @@
 <?php include 'includes/header.php'; ?>
 
 <h2><?= $account->type ?> Account</h2>
-<p>Account number: <?= $account->number->accountNumber; ?></p>
-<p>Routing number: <?= $account->number->routingNumber; ?></p>
+<p>Account number: <?= $account->number->getAccountNumber(); ?></p>
+<p>Routing number: <?= $account->number->getRoutingNumber(); ?></p>
 <p>Previous balance: $<?= $account->getBalance() ?></p>
 <p>New balance: $<?= $account->deposit( 350.00 ) ?></p>
