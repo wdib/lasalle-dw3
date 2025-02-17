@@ -49,7 +49,7 @@
 
 <?= $message ?>
 
-<form action="validate-form.php" method="POST">
+<form action="index.php" method="POST">
   Name: <input
     type  = "text"
     name  = "name"
@@ -81,7 +81,5 @@
   <br />
   <input type="submit" value="Save">
 </form>
-
-<pre><?= var_dump( $_POST ) ?></pre>
 
 <?php include 'includes/footer.php'; ?>
