@@ -73,3 +73,7 @@ th {
 p {
   margin-bottom : 1.6em;
 }
+
+td.out-of-stock {
+  color : #615454;
+}
