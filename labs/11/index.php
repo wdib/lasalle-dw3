@@ -5,7 +5,7 @@
     return ( $number >= $min and $number <= $max );
   }
 
-  function is_text( $text, $min = 0, $max = 1000 ) {
+  function is_text( $text, $min = 0, $max = 1000 ): bool {
     $length = mb_strlen( $text );
     return ( $length >= $min and $length <= $max );
   }
