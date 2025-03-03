@@ -1,9 +1,9 @@
 <?php
-  $counter = $_COOKIE[ 'counter' ] ?? 0; // Get data
-  $counter = $counter + 1;               // +1 to counter 
-  setcookie( 'counter', $counter );      // Update cookie
+  $counter = $_COOKIE[ 'counter' ] ?? 0;
+  $counter = $counter + 1;
+  setcookie( 'counter', $counter );
 
-  $message = 'Page views: ' . $counter;  // Message
+  $message = 'Page views: ' . $counter;
 ?>
 
 <?php include 'includes/header.php'; ?> 
