@@ -1,6 +1,7 @@
 <?php
   include 'includes/sessions.php';
   // Make use of the `require_login` function which you define in includes/sessions.php
+  require_login( $logged_in );
 ?>
 
 <?php include 'includes/header-member.php'; ?>

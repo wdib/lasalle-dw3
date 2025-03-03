@@ -14,6 +14,9 @@
           // If the user is logged in, display a link to the logout page.
           // Otherwise, display a link to the login page.
           // Ensure that both links have the appropriate text.
+          $logged_in
+          ? '<a href="logout.php">Log Out</a>'
+          : '<a href="login.php">Log In</a>';
         ?>
       </nav>
       <section>
