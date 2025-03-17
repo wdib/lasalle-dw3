@@ -9,6 +9,8 @@
   $password = ''; // Enter YOUR password here
 
   // Options for how PDO works
+  // See: https://www.php.net/manual/en/pdo.constants.php
+  //
   // PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
   //   Throw a PDOException if an error occurs
   //
