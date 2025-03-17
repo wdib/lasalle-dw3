@@ -9,6 +9,17 @@
   $password = ''; // Enter YOUR password here
 
   // Options for how PDO works
+  // PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+  //   Throw a PDOException if an error occurs
+  //
+  // PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+  //   Specifies that the fetch method shall return each row as an array
+  //   indexed by column name as returned in the corresponding result set.
+  //
+  // PDO::ATTR_EMULATE_PREPARES => false
+  //   Ensure that any integer data types in the database are returned to the
+  //   PHP code as int data types (as opposed to strings).
+  //
   $options  = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
