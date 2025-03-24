@@ -13,7 +13,6 @@
     JOIN      member   AS M ON A.member_id   = M.id
     LEFT JOIN image    AS I ON A.image_id    = I.id
     WHERE
-      A.summary LIKE '%design%' AND
       A.published = 1
     ORDER BY A.created DESC
     LIMIT 6;"
