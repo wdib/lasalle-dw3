@@ -4,6 +4,7 @@
 
   $sql = "SELECT
       A.id,   A.title, A.summary,
+      A.category_id, A.member_id,
       C.name AS category,
       CONCAT( M.forename, ' ', M.surname ) AS author,
       I.file AS image_file,
