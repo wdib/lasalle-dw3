@@ -21,6 +21,13 @@
   ;
 
   $articles = pdo( $pdo, $sql )->fetchAll();
+
+  $title       = 'Creative Folk';
+  $description = 'A collective of creatives for hire';
+  $section     = '';
+
+  $sql        = "SELECT id, name FROM category WHERE navigation = 1;";
+  $navigation = pdo( $pdo, $sql )->fetchAll();
 ?>
 <?php include 'includes/header.php' ?>
     <main class="container grid" id="content">
