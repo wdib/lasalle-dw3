@@ -1,17 +1,22 @@
-<?php http_response_code(404); ?>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Page not found</title>
-    <link rel="stylesheet" type="text/css" href="/dw3/databases/cms/css/styles.css" />
-  </head>
-  <body>
-    <div class="article">
-      <h1>Sorry! We cannot find that page.</h1>
-      <p>Try the <a href="home.php">home page</a> or email us 
+<?php
+  declare(strict_types = 1);
+  http_response_code( 404 );
+  require_once 'includes/database-connection.php';
+  require_once 'includes/functions.php';
+
+  $sql         = "SELECT id, name FROM category WHERE navigation = 1;";
+  $navigation  = pdo( $pdo, $sql )->fetchAll();
+  $section     = '';
+  $title       = 'Page not found';
+  $description = '';
+?>
+<?php require_once 'includes/header.php'; ?>
+  <main class="container" id="content">
+    <h1>Sorry! We cannot find that page.</h1>
+    <p>Try the <a href="index.php">home page</a> or email us
       <a href="mailto:hello@eg.link">hello@eg.link</a></p>
-    </div>
-  </body>
-</html>
-<?php exit; ?>
+  </main>
+<?php
+  require_once 'includes/footer.php';
+  exit;
+?>

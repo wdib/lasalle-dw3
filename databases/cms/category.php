@@ -1,4 +1,5 @@
 <?php
+
   declare(strict_types=1);
   require 'includes/database-connection.php';
   require 'includes/functions.php';
@@ -15,14 +16,14 @@
 
   // Fetch the category whose ID is provided
   // If the category does not exist, redirect the user to "Page not found".
-  $sql      = "SELECT id, name, description FROM category WHERE id = :id";
+  $sql      = "SELECT id, name, description FROM category WHERE id=:id;";
   $category = pdo( $pdo, $sql, [ 'id' => $id ] )->fetch();
   if ( ! $category ) {
     include 'page-not-found.php';
   }
 
   $sql = "SELECT
-      A.id,   A.title, A.summary,
+      A.id,          A.title,     A.summary,
       A.category_id, A.member_id,
       C.name AS category,
       CONCAT( M.forename, ' ', M.surname ) AS author,
@@ -45,31 +46,37 @@
   $description = $category[ 'description' ];
   $section     = $category[ 'id'          ];
 
-  $sql        = "SELECT id, name FROM category WHERE navigation = 1;";
-  $navigation = pdo( $pdo, $sql )->fetchAll();
+  $sql         = "SELECT id, name FROM category WHERE navigation = 1;";
+  $navigation  = pdo( $pdo, $sql )->fetchAll();
 ?>
 
-<?php include 'includes/header.php' ?>
+<?php include 'includes/header.php'; ?>
 
-<main class="container grid" id="content">
-  <?php foreach ( $articles as $article ) { ?>
-    <article class="summary">
-      <a href="article.php?id=<?= $article['id'] ?>">
-        <img
-          src = "uploads/<?= htmlspecialchars( $article[ 'image_file' ] ?? 'blank.png' ) ?>"
-          alt = "<?= htmlspecialchars( $article[ 'image_alt' ] ) ?>"
-        />
-        <h2><?= htmlspecialchars( $article[ 'title'   ] ) ?></h2>
-        <p><?=  htmlspecialchars( $article[ 'summary' ] ) ?></p>
-      </a>
-      <p class="credit">
-        Posted in <a href="category.php?id=<?= $article[ 'category_id' ] ?>">
-        <?= htmlspecialchars( $article[ 'category' ] ) ?></a>
-        by <a href="member.php?id=<?= $article[ 'member_id' ] ?>">
-        <?= htmlspecialchars( $article[ 'author' ] ) ?></a>
-      </p>
-    </article>
-  <?php } ?>
+<main class="container" id="content">
+  <section class="header">
+    <h1><?= htmlspecialchars( $category[ 'name'        ] ) ?></h1>
+    <p><?=  htmlspecialchars( $category[ 'description' ] ) ?></p>
+  </section>
+  <section class="grid">
+    <?php foreach ( $articles as $article ) { ?>
+      <article class="summary">
+        <a href="article.php?id=<?= $article[ 'id' ] ?>">
+          <img
+            src = "uploads/<?= htmlspecialchars( $article[ 'image_file' ] ?? 'blank.png' ) ?>"
+            alt = "<?= htmlspecialchars( $article[ 'image_alt' ] ) ?>"
+          />
+          <h2><?= htmlspecialchars( $article[ 'title'   ] ) ?></h2>
+          <p><?=  htmlspecialchars( $article[ 'summary' ] ) ?></p>
+        </a>
+        <p class="credit">
+          Posted in <a href="category.php?id=<?= $article[ 'category_id' ] ?>">
+          <?= htmlspecialchars( $article[ 'category' ] ) ?></a>
+          by <a href="member.php?id=<?= $article[ 'member_id' ] ?>">
+          <?= htmlspecialchars( $article[ 'author' ] ) ?></a>
+        </p>
+      </article>
+    <?php } ?>
+  </section>
 </main>
 
-<?php include 'includes/footer.php' ?>
+<?php include 'includes/footer.php'; ?>
