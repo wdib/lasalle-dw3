@@ -1,6 +1,7 @@
 <?php
   declare(strict_types=1);
   require 'includes/database-connection.php';
+  require 'includes/functions.php';
 
   $sql = "SELECT
       A.id,   A.title, A.summary,
@@ -19,8 +20,7 @@
     LIMIT 6;"
   ;
 
-  $statement = $pdo->query( $sql );
-  $articles  = $statement->fetchAll();
+  $articles = pdo( $pdo, $sql )->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="en">
