@@ -22,18 +22,7 @@
 
   $articles = pdo( $pdo, $sql )->fetchAll();
 ?>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
-    <link rel="shortcut icon" type="image/png" href="/dw3/databases/cms/img/favicon.ico">
-  </head>
-  <body>
+<?php include 'includes/header.php' ?>
     <main class="container grid" id="content">
       <?php foreach ( $articles as $article ) { ?>
         <article class="summary">
