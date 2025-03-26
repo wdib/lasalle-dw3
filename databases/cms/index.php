@@ -50,5 +50,4 @@
         </article>
       <?php } ?>
     </main>
-  </body>
-</html>
+<?php include 'includes/footer.php' ?>
