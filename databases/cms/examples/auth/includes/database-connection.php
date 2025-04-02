@@ -5,8 +5,8 @@
   $port     = '3306';      // Port is usually 8889 in MAMP and 3306 in XAMPP
   $charset  = 'utf8mb4';   // UTF-8 encoding using 4 bytes of data per character
 
-  $username = 'wdib';             // Enter YOUR username here
-  $password = '@ffuJ3UKyNY4Fj)r'; // Enter YOUR password here
+  $username = '';             // Enter YOUR username here
+  $password = ''; // Enter YOUR password here
 
   // Options for how PDO works
   // See: https://www.php.net/manual/en/pdo.constants.php
