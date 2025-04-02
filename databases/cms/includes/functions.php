@@ -9,4 +9,9 @@ function pdo ( PDO $pdo, string $sql, array $arguments = null ) {
   return $statement;                  // Return PDOStatement object
 }
 
+function format_date( string $string ): string {
+  $date = date_create_from_format( 'Y-m-d H:i:s', $string );
+  return $date->format( 'F d, Y' );
+}
+
 ?>
