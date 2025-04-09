@@ -63,7 +63,7 @@
         <a href="article.php?id=<?= $article[ 'id' ] ?>">
           <img
             src = "uploads/<?= htmlspecialchars( $article[ 'image_file' ] ?? 'blank.png' ) ?>"
-            alt = "<?= htmlspecialchars( $article[ 'image_alt' ] ) ?>"
+            alt = "<?= htmlspecialchars( $article[ 'image_alt' ] ?? '' ) ?>"
           />
           <h2><?= htmlspecialchars( $article[ 'title'   ] ) ?></h2>
           <p><?=  htmlspecialchars( $article[ 'summary' ] ) ?></p>
