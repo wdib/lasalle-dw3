@@ -4,12 +4,12 @@
   //
 
   $type     = 'mysql';
-  $server   = '';
-  $db       = '';
-  $port     = '';    
+  $server   = 'localhost';
+  $db       = 'college';
+  $port     = '3306';    
   $charset  = 'utf8mb4';    
-  $username = '';
-  $password = '';
+  $username = ''; // Your non-root username
+  $password = ''; // Your non-root username's password
 
   $dsn = "$type:host=$server;dbname=$db;port=$port;charset=$charset";
 ?>

@@ -20,7 +20,7 @@
 
       // Old developer comment:
       // "Not sure about this line.. need to come back and double-check"
-      $is_authenticated = $password === $student[ 'password' ];
+      $is_authenticated = password_verify( $password, $student[ 'password' ] );
 
       return $is_authenticated ? $student : false;
     }

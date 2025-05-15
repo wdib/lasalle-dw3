@@ -56,6 +56,11 @@
       // Old developer comment:
       // "Need to update the available slots for the course"
       //
+      $sql = "UPDATE course
+        SET available_slots = available_slots - 1
+        WHERE id = :course_id;"
+      ;
+      $this->db->runSQL( $sql, [ 'course_id' => $course_id ] );
 
       return true;
     }
@@ -83,10 +88,17 @@
       // Old developer comment:
       // "Need to delete the registration for the student and course in question"
       //
+      $sql = "DELETE FROM registration WHERE id = :registration_id;";
+      $this->db->runSQL( $sql, [ 'registration_id' => $registration[ 'id' ] ] );
 
-       // Old developer comment:
+      // Old developer comment:
       // "Need to update the available slots for the course"
       //
+      $sql = "UPDATE course
+        SET available_slots = available_slots + 1
+        WHERE id = :course_id;"
+      ;
+      $this->db->runSQL( $sql, [ 'course_id' => $course_id ] );
 
       return true;
     }
